@@ -38,7 +38,7 @@ left join products p
     on o.product_id = p.product_id
 left join customers_scd2 c 
     on o.customer_id = c.customer_id
-    and o.order_date >= c.valid_from 
-    and o.order_date < c.valid_to
-left join geo_mapping g 
+    and o.order_date >= c.dbt_valid_from 
+    and o.order_date < c.dbt_valid_to
+left join country_mapping g 
     on c.country = g.country_code
