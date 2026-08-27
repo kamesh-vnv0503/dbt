@@ -1,1 +1,7 @@
-select * from RAW.GLOBALMART.CUSTOMER
+{{
+    config(
+        materialized='table'
+    )
+}}
+
+select * from raw.globalmart.customer
