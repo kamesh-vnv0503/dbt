@@ -1,0 +1,10 @@
+version: 1
+
+sources:
+  - name: raw
+    database: ANALYTICS
+    schema: DBT_KB
+    tables:
+      - name: raw_customer
+      - name: raw_orders
+      - name: raw_product
